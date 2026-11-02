@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MARGIN — an independent reading and culture journal.">
+  <title>MARGIN — Independent Reading Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="#" class="brand">MARGIN<span>®</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#discover">THE INDEX</a><a href="#stories">CULTURE</a><a href="#about">ABOUT</a>
+      </nav>
+      <a href="#collection" class="saved-link">SAVED STORIES <b id="favoriteCount">00</b></a>
+      <button class="menu-mark" aria-label="Menu" type="button">＋</button>
+    </header>
+
+    <main>
+      <section class="cover-layout">
+        <div class="cover-main">
+          <div class="cover-image">
+            <div class="cover-image-shade"></div>
+            <div class="cover-micro"><span>ISSUE Nº 01 — 2026</span><span>THE CULTURE OF CURIOSITY</span></div>
+            <div class="cover-title"><span class="cover-kicker">AN INDEPENDENT READING JOURNAL</span><h1>READ<br><i>BETWEEN</i><br>WORLDS<span>.</span></h1></div>
+            <div class="cover-bottom"><span>BOOKS · IDEAS · CULTURE</span><span>VOL. 001 / 014</span></div>
+          </div>
+          <div class="cover-intro">
+            <span class="intro-bracket">[ THE ART OF GETTING LOST ]</span>
+            <p>Some stories stay with you. Others change the way you see. A living index of books, voices and ideas for the endlessly curious.</p>
+            <a href="#discover" class="intro-link">ENTER THE INDEX <span>↗</span></a>
+          </div>
+          <div class="feature-strip" id="stories">
+            <article class="feature-card feature-one">
+              <div class="feature-art art-one"><span>01</span><b>THE<br>INNER<br>LANDSCAPE</b><i>✳</i></div>
+              <div class="feature-meta"><span>01 / PERSPECTIVES</span><h3>Ideas that<br>shift the frame.</h3><a href="#discover" data-feature-query="philosophy">EXPLORE SUBJECT ↗</a></div>
+            </article>
+            <article class="feature-card feature-two">
+              <div class="feature-art art-two"><span>02</span><b>FUTURE<br>MEMORIES</b><i>◉</i></div>
+              <div class="feature-meta"><span>02 / FICTION</span><h3>Worlds beyond<br>the ordinary.</h3><a href="#discover" data-feature-query="science fiction">EXPLORE SUBJECT ↗</a></div>
+            </article>
+            <article class="feature-card feature-three">
+              <div class="feature-art art-three"><span>03</span><b>FORM<br>FOLLOWS<br>FEELING</b><i>▧</i></div>
+              <div class="feature-meta"><span>03 / VISUAL CULTURE</span><h3>Look closer.<br>See differently.</h3><a href="#discover" data-feature-query="photography">EXPLORE SUBJECT ↗</a></div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="cover-rail">
+          <div class="rail-head"><span>THE EDITOR'S CUT</span><span>01—03</span></div>
+          <div class="rail-image rail-image-one"><span class="rail-vertical">A STUDY IN FORM / 001</span><div class="rail-overlay">THE<br>SHAPE OF<br>THOUGHT</div></div>
+          <div class="rail-copy"><span>FEATURED READING</span><h2>Architecture<br>of the mind.</h2><p>From the spaces we inhabit to the ideas we build inside them.</p><a href="#discover" data-feature-query="architecture">DISCOVER THE EDITION ↗</a></div>
+          <div class="rail-divider"></div>
+          <div class="rail-mini"><span class="mini-no">02</span><div><b>THE SOUND OF WORDS</b><small>NOTES ON MUSIC & MEMORY</small></div><span>↗</span></div>
+          <div class="rail-mini"><span class="mini-no">03</span><div><b>AFTER THE IMAGE</b><small>PHOTOGRAPHY & IDENTITY</small></div><span>↗</span></div>
+          <div class="rail-footer"><span>INDEPENDENT BY NATURE.</span><span>EST. MMXXVI</span></div>
+        </aside>
+      </section>
+
+      <section class="search-section" id="discover">
+        <div class="section-topline"><span>04 / THE OPEN CATALOGUE</span><span>POWERED BY OPEN LIBRARY</span></div>
+        <div class="search-heading"><h2>Find your<br><i>next obsession.</i></h2><p>Not an algorithm. Not a listicle.<br>Just a doorway into the world's books.</p></div>
+        <form id="searchForm" class="search-form">
+          <label for="searchInput">SEARCH THE ARCHIVE</label>
+          <div class="search-control"><input id="searchInput" type="search" value="architecture" placeholder="A title, an author, an idea..." required><button id="loadButton" type="submit"><span class="button-label">SEARCH</span><b class="button-arrow">↗</b></button></div>
+          <div class="search-foot"><span>TYPE ANYTHING. FOLLOW IT SOMEWHERE.</span><span>ENTER ↵</span></div>
+        </form>
+        <div class="topic-line"><span>GO DOWN A RABBIT HOLE</span><button type="button" class="topic-chip" data-query="architecture">Architecture ↗</button><button type="button" class="topic-chip" data-query="philosophy">Philosophy ↗</button><button type="button" class="topic-chip" data-query="photography">Photography ↗</button><button type="button" class="topic-chip" data-query="science fiction">Fiction ↗</button><button type="button" class="topic-chip" data-query="music">Music ↗</button></div>
+      </section>
+
+      <section class="catalogue" id="collection">
+        <div class="catalogue-head"><div><span class="section-index">05 / THE READING ROOM</span><h2 id="resultsTitle">The current selection<span>.</span></h2></div><div class="catalogue-controls"><span id="resultsMeta">WAITING FOR YOUR SEARCH</span><label>ARRANGE <select id="sortSelect"><option value="relevance">Relevance</option><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="title">A—Z</option></select></label><button id="favoritesFilter" type="button" aria-pressed="false">SAVED <b id="savedCountSmall">00</b></button></div></div>
+        <div id="statusArea" role="status" aria-live="polite"><div class="empty-state"><span>THE ARCHIVE IS OPEN</span><h3>Begin anywhere.</h3><p>Search for a subject, a writer, or a book that has been on your mind.</p></div></div>
+        <div id="booksGrid" class="books-grid" aria-live="polite"></div>
+        <div class="load-more-wrap" id="loadMoreWrap" hidden><button id="loadMoreButton" type="button">LOAD MORE STORIES <span>↓</span></button></div>
+      </section>
+    </main>
+
+    <footer id="about"><a class="footer-brand" href="#">MARGIN<span>®</span></a><p>A JOURNAL FOR THE CURIOUS.<br><small>BOOK DATA VIA OPEN LIBRARY · BUILT WITH JQUERY AJAX</small></p><a href="#" class="back-top">BACK TO THE TOP ↑</a></footer>
+  </div>
+</body>
+</html>
